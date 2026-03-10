@@ -2,7 +2,7 @@
 
 ## Overview
 
-This folder contains the code used to prepare and analyze publicly available MTA NYCT data for the PAU Analyst Skills Exercise. The analysis focuses on B Line performance trends during 2024–2025.
+This folder contains the code used to prepare and analyze publicly available MTA NYCT data for a skills exercise. The analysis focuses on B Line performance trends during 2024–2025.
 
 Raw data files are not included; all inputs are sourced from the New York Open Data Portal as specified in the assignment.
 
