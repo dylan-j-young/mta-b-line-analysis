@@ -1,0 +1,20 @@
+# Ignore these files and directories in version control
+
+# Python files
+**/__pycache__/
+
+# VSCode settings
+.vscode/*
+!.vscode/launch.json
+
+# Data (memory-intensive)
+data/*
+
+# Internal docs
+docs/
+
+# Test notebooks
+scratch_notebooks/
+
+# Log files
+*.log
