@@ -3,6 +3,8 @@ import pandas as pd
 import sqlite3
 import logging
 
+import os
+
 DATABASE_DIR = "data/subway_records.db"
 
 def csv_to_table_by_chunks(csv_path, table_name,
@@ -60,6 +62,8 @@ def setup_logging():
 
 def main():
     setup_logging()
+
+    os.makedirs("data", exist_ok=True)
     
     logging.info("Constructing SQLite database...")
 
