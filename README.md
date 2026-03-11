@@ -2,7 +2,7 @@
 
 ## Overview
 
-This folder contains the code used to prepare and analyze publicly available MTA NYCT data for a skills exercise. The analysis focuses on B Line performance trends during 2024–2025.
+This folder contains the code used to prepare and analyze publicly available MTA NYCT data for a skills exercise. The analysis focuses on B Line performance trends during 2024–2025. For a discussion of the results, check out my [project page](https://dylan-j-young.github.io/projects/b-line-performance-analysis)!
 
 Raw data files are not included; all inputs are sourced from the New York Open Data Portal and can be downloaded as CSV files manually. It is also possible to call the Socrata API with a library such as `sodapy`. However, the site severely limits API query size, so this would require repeated API calls and stitching together partial datasets (doable, but potentially slow).
 - Subway end-to-end running times [(link)](https://data.ny.gov/Transportation/MTA-Subway-End-to-End-Running-Times-Beginning-2019/sp9g-mzjh/about_data)
