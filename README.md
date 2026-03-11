@@ -4,7 +4,7 @@
 
 This folder contains the code used to prepare and analyze publicly available MTA NYCT data for a skills exercise. The analysis focuses on B Line performance trends during 2024–2025.
 
-Raw data files are not included; all inputs are sourced from the New York Open Data Portal.
+Raw data files are not included; all inputs are sourced from the New York Open Data Portal and can be downloaded as CSV files manually. It is also possible to call the Socrata API with a library such as `sodapy`. However, the site severely limits API query size, so this would require repeated API calls and stitching together partial datasets (doable, but potentially slow).
 - Subway end-to-end running times [(link)](https://data.ny.gov/Transportation/MTA-Subway-End-to-End-Running-Times-Beginning-2019/sp9g-mzjh/about_data)
 - Subway schedules in 2024 [(link)](https://data.ny.gov/Transportation/MTA-Subway-Schedules-2024/ebrw-j62c/about_data)
 - Subway schedules in 2025 [(link)](https://data.ny.gov/Transportation/MTA-Subway-Schedules-2025/q9nv-uegs/about_data)
@@ -20,7 +20,11 @@ Performs all analysis and generates figures used in the presentation, including 
 
 ## Execution order
 
-1. Download local copies of the datasets and store them in the `data/` folder.
+1. Download local copies of the datasets and store them in the `data/` folder with the proper names (if this folder does not exist, create it):
+    - `delays_all-trains.csv` for the "Subway Trains Delayed" dataset (pre-filtered on the time period 2024-2025)
+    - `running_times_all-trains.csv` for the "Subway End-to-End Running Times" dataset (pre-filtered on the time period 2024-2025)
+    - `schedule_2024_b-line.csv` for the "Subway schedules in 2024" dataset (pre-filtered to just B line trains to save disk space)
+    - `schedule_2025_b-line.csv` for the "Subway schedules in 2025" dataset (pre-filtered to just B line trains to save disk space)
 2. Run `data_prep.py` to create the SQLite database from the raw CSV inputs.
 3. Open and run `analysis.ipynb` to reproduce the analysis and figures.
 
